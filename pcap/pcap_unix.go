@@ -23,14 +23,11 @@ import (
 )
 
 /*
-#cgo solaris LDFLAGS: -L /opt/local/lib -lpcap
-#cgo linux LDFLAGS: -L ../../../../../work/libpcap  -lpcap -static
-#cgo CFLAGS: -I ../../../../../work/libpcap 
-#cgo dragonfly LDFLAGS: -lpcap
-#cgo freebsd LDFLAGS: -lpcap
-#cgo openbsd LDFLAGS: -lpcap
-#cgo netbsd LDFLAGS: -lpcap
-#cgo darwin LDFLAGS: -lpcap
+
+#cgo amd64 LDFLAGS: -L ../../../../../work/libpcap  -lpcap -static 
+#cgo arm64 LDFLAGS: -L ../../../../../work.aarch64/libpcap  -lpcap -static
+#cgo amd64 CFLAGS: -I ../../../../../work/libpcap
+#cgo arm64 CFLAGS: -I ../../../../../work.aarch64/libpcap 
 #include <stdlib.h>
 #include <pcap.h>
 #include <stdint.h>
